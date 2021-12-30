@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.cs" Inherits="SistemaManualPuestosV0_1.Global_asax" Language="C#" %>

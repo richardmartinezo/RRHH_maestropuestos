@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.cs" Inherits="RegistroRPA.Global_asax" Language="C#" %>

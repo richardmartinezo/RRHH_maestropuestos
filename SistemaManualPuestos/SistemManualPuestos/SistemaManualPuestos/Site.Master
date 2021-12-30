@@ -1,0 +1,66 @@
+﻿<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Site.master.vb" Inherits="SistemaAtencion.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />     
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" /> 
+    <asp:PlaceHolder runat="server">        
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script src="<%: ResolveUrl("~/Scripts/modernizr-2.6.2.js") %>"></script>
+    </asp:PlaceHolder>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+    <style type="text/css">
+        .auto-style1 {
+            font-family: "Segoe UI";
+            font-size: large;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server">
+    <asp:ScriptManager runat="server">
+        <Scripts>
+            <asp:ScriptReference Name="jquery" />
+            <asp:ScriptReference Name="jquery.ui.combined" />
+        </Scripts>
+    </asp:ScriptManager>
+    <header>
+        <div class="content-wrapper">
+            <div class="float-left">
+            </div>
+            <div class="float-right">
+                <section id="login">
+                </section>
+                <nav>
+                    <ul id="menu">
+                        <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/About">About</a></li>
+                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/logo_header_dgac.png" />
+        </div>
+    </header>
+    <div id="body">
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+        <section class="content-wrapper main-content clear-fix">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </section>
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            Buenos Aires Oe1-53 y Av. 10 de Agosto
+            <br />
+            Código Postal: 170411 / Quito - Ecuador
+            <br />
+            Teléfono: (593-2) 2947400</div>
+    </footer>
+    </form>
+</body>
+</html>

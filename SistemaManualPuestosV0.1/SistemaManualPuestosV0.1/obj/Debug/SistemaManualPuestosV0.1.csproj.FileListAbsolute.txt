@@ -1,0 +1,9 @@
+C:\proyectos\RRHH\SistemaManualPuestosV0.1\SistemaManualPuestosV0.1\bin\SistemaManualPuestosV0.1.dll.config
+C:\proyectos\RRHH\SistemaManualPuestosV0.1\SistemaManualPuestosV0.1\bin\SistemaManualPuestosV0.1.dll
+C:\proyectos\RRHH\SistemaManualPuestosV0.1\SistemaManualPuestosV0.1\bin\SistemaManualPuestosV0.1.pdb
+C:\proyectos\RRHH\SistemaManualPuestosV0.1\SistemaManualPuestosV0.1\obj\Debug\SistemaManualPuestosV0.1.dll.licenses
+C:\proyectos\RRHH\SistemaManualPuestosV0.1\SistemaManualPuestosV0.1\obj\Debug\SistemaManualPuestosV0.1.dll
+C:\proyectos\RRHH\SistemaManualPuestosV0.1\SistemaManualPuestosV0.1\obj\Debug\SistemaManualPuestosV0.1.pdb
+C:\proyectos\RRHH\SistemaManualPuestosV0.1\SistemaManualPuestosV0.1\obj\Debug\SistemaManualPuestosV0.1.csprojResolveAssemblyReference.cache
+C:\proyectos\RRHH\SistemaManualPuestosV0.1\SistemaManualPuestosV0.1\obj\Debug\XtraReportMaestro.resources
+C:\proyectos\RRHH\SistemaManualPuestosV0.1\SistemaManualPuestosV0.1\obj\Debug\SistemaManualPuestosV0.1.csproj.GenerateResource.Cache

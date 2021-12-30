@@ -1,0 +1,67 @@
+﻿Imports DevExpress.Web.ASPxEditors
+
+Public Class grilla
+    Inherits System.Web.UI.UserControl
+
+    Public Sub ActualizagrillaMethod(Aerop As String, fechainicio As Date, fechafin As Date, cia As String)
+
+
+        Session("Aerop") = Aerop
+        Session("cia") = cia
+        Session("fechainicio") = fechainicio
+        Session("fechafin") = fechafin
+        'Me.ASPxGridView1.DataBind()
+
+    End Sub
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
+    End Sub
+
+    Protected Sub SqlDataSource_cabecera_dta_Selecting(sender As Object, e As SqlDataSourceSelectingEventArgs) Handles SqlDataSource_cabecera_dta.Selecting
+
+        e.Command.Parameters("@f1").Value = Session("fechainicio")
+        e.Command.Parameters("@f2").Value = Session("fechafin")
+        e.Command.Parameters("@PARAM_TYPE").Value = Session("operacion")
+        Dim string_sql As String
+        string_sql = " and company  = '" & Trim(Session("cia")) & "'"
+        e.Command.CommandText = e.Command.CommandText & string_sql
+        string_sql = " and aerodrome = '" & Session("Aerop") & "'"
+        e.Command.CommandText = e.Command.CommandText & string_sql
+
+    End Sub
+
+    Protected Sub SqlDataSource_cias_Selecting(sender As Object, e As SqlDataSourceSelectingEventArgs) Handles SqlDataSource_cias.Selecting
+        If IsNothing(Session("p1")) Or Session("p1") = "%%" Or Session("p1") = "%NO ASSIGN%" Then
+            e.Cancel = True
+            Exit Sub
+        End If
+        e.Command.Parameters("@p1").Value = Session("p1")
+        Session("p1") = "%%"
+    End Sub
+
+    Protected Sub ASPxGridView3_CellEditorInitialize(sender As Object, e As DevExpress.Web.ASPxGridView.ASPxGridViewEditorEventArgs) Handles ASPxGridView3.CellEditorInitialize
+        If e.Column.FieldName = "cod_compania" Then
+            Dim combo As ASPxComboBox = TryCast(e.Editor, ASPxComboBox)
+
+            AddHandler combo.ItemsRequestedByFilterCondition, AddressOf combo_id_company_filter
+            AddHandler combo.ItemRequestedByValue, AddressOf combo_id_company_item
+            AddHandler combo.SelectedIndexChanged, AddressOf combo_id_company_databind
+
+        End If
+    End Sub
+
+    Private Sub combo_id_company_filter(ByVal source As Object, ByVal e As DevExpress.Web.ASPxEditors.ListEditItemsRequestedByFilterConditionEventArgs)
+        Session("p1") = "%" & e.Filter & "%"
+        Dim combo As ASPxComboBox = TryCast(source, ASPxComboBox)
+        combo.DataBind()
+        combo.SelectedIndex = 1
+    End Sub
+    Private Sub combo_id_company_item(ByVal source As Object, ByVal e As ListEditItemRequestedByValueEventArgs)
+        Dim combo2 As ASPxComboBox = TryCast(source, ASPxComboBox)
+
+    End Sub
+    Protected Sub combo_id_company_databind(sender As Object, e As EventArgs)
+
+    End Sub
+End Class

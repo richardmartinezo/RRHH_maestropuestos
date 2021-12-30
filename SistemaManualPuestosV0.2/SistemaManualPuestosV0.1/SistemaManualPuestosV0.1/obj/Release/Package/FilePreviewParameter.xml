@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="/RRHH_Maestro_Puestos" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\proyectos\\RRHH\\SistemaManualPuestosV0\.1\\SistemaManualPuestosV0\.1\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\proyectos\\RRHH\\SistemaManualPuestosV0\.1\\SistemaManualPuestosV0\.1\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="Add write permission to App_Data Folder" description="Add write permission to App_Data folder" value="/RRHH_Maestro_Puestos/App_Data" tags="Hidden">
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\proyectos\\RRHH\\SistemaManualPuestosV0\.1\\SistemaManualPuestosV0\.1\\obj\\Release\\Package\\PackageTmp\\App_Data$" />
+  </parameter>
+  <parameter name="ApplicationServices-Web.config Connection String" description="" value="data source=(localdb)\v11.0;integrated security=SSPI;attachdbfilename=|DataDirectory|\aspnetdb.mdf" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\proyectos\\RRHH\\SistemaManualPuestosV0\.1\\SistemaManualPuestosV0\.1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ApplicationServices']/@connectionString" />
+  </parameter>
+  <parameter name="NWindConnectionString-Web.config Connection String" description="" value="data source=(localdb)\v11.0;attachdbfilename=|DataDirectory|\NWind.mdf;integrated security=True;connect timeout=120" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\proyectos\\RRHH\\SistemaManualPuestosV0\.1\\SistemaManualPuestosV0\.1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='NWindConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="RRHHConnectionString-Web.config Connection String" description="" value="Data Source=WIN-SQLSERV-01;Initial Catalog=RRHH;User ID=adminsql;Password=sistema*-!" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\proyectos\\RRHH\\SistemaManualPuestosV0\.1\\SistemaManualPuestosV0\.1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='RRHHConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="win-sqlserv-01_RRHH_Connection 1-Web.config Connection String" description="" value="XpoProvider=MSSqlServer;data source=win-sqlserv-01;user id=adminsql;password=sistema*-!;initial catalog=RRHH;Persist Security Info=true" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\proyectos\\RRHH\\SistemaManualPuestosV0\.1\\SistemaManualPuestosV0\.1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='win-sqlserv-01_RRHH_Connection 1']/@connectionString" />
+  </parameter>
+  <parameter name="win-sqlserv-01_RRHH_Connection-Web.config Connection String" description="" value="XpoProvider=MSSqlServer;data source=win-sqlserv-01;user id=adminsql;password=sistema*-!;initial catalog=RRHH;Persist Security Info=true" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\proyectos\\RRHH\\SistemaManualPuestosV0\.1\\SistemaManualPuestosV0\.1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='win-sqlserv-01_RRHH_Connection']/@connectionString" />
+  </parameter>
+</parameters>
